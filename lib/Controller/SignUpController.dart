@@ -1,20 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vehicleinfo/Model/AppUtils/SignUpUtil.dart';
 
 import '../Model/AppUtils/SignInUtil.dart';
 
-class SignInController extends GetxController {
+class SignUpController extends GetxController {
   hidePassword() {
-    SignInUtil.showPass = !SignInUtil.showPass;
-    if (SignInUtil.showPass == true) {
-      SignInUtil.showPassIcon = const Icon(
+    SignUpUtil.showPass = !SignUpUtil.showPass;
+    if (SignUpUtil.showPass == true) {
+      SignUpUtil.showPassIcon = const Icon(
         CupertinoIcons.eye,
         size: 25,
         color: Colors.black26,
       );
     } else {
-      SignInUtil.showPassIcon = const Icon(
+      SignUpUtil.showPassIcon = const Icon(
         CupertinoIcons.eye_slash,
         size: 25,
         color: Colors.black26,
@@ -24,7 +25,7 @@ class SignInController extends GetxController {
   }
 
   bool obscureTextShow() {
-    if (SignInUtil.showPass == false) {
+    if (SignUpUtil.showPass == false) {
       update();
       return true;
     } else {
@@ -34,7 +35,7 @@ class SignInController extends GetxController {
   }
 
   logInValidation() {
-    if (SignInUtil.formKey.currentState!.validate()) {
+    if (SignUpUtil.formKey.currentState!.validate()) {
     } else {}
     update();
   }

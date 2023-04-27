@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vehicleinfo/Views/SignUpScreen.dart';
 import '../Controller/SignInController.dart';
 import '../Model/AppUtils/SignInUtil.dart';
 import '../Model/AppUtils/SizeUtil.dart';
@@ -70,14 +71,13 @@ class _Sign_InState extends State<Sign_In> {
                     ),
                     style: SignInUtil.inputText,
                     controller: SignInUtil.emailController,
-                    validator: (val) {
+                    validator:  (val) {
                       if (val!.isEmpty) {
-                        return "Please Enter the Email";
+                        return "Please Enter Email";
                       }
-                      if (!RegExp(
-                          r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$')
+                      if (!RegExp(r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$')
                           .hasMatch(val)) {
-                        return "Enter Valid a Email";
+                        return "Enter Valid Email";
                       }
                     },
                   ),
@@ -113,10 +113,10 @@ class _Sign_InState extends State<Sign_In> {
                         controller: SignInUtil.passwordController,
                         validator: (val) {
                           if (val == null || val.isEmpty) {
-                            return 'Enter Must be 8 characters which contain one uppercase,symbol and digit';
+                            return 'Enter Password';
                           }
                           if (SignInUtil.validateStructure(val) == false) {
-                            return 'Enter Must be 8 characters which contain one uppercase,symbol and digit';
+                            return 'Enter Strong Password';
                           } else {
                             return null;
                           }
@@ -210,18 +210,23 @@ class _Sign_InState extends State<Sign_In> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0),
-                  child: Text.rich(TextSpan(children: [
-                    TextSpan(
-                        text: "New to Logistics?",
-                        style: GoogleFonts.poppins(
-                            fontSize: 14, color: Colors.black54)),
-                    TextSpan(
-                        text: " Register",
-                        style: GoogleFonts.poppins(
-                            fontSize: 14.5,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xff191970))),
-                  ])),
+                  child: InkWell(
+                    onTap: (){
+                      Get.to(Sign_Up());
+                    },
+                    child: Text.rich(TextSpan(children: [
+                      TextSpan(
+                          text: "New to Logistics?",
+                          style: GoogleFonts.poppins(
+                              fontSize: 14, color: Colors.black54)),
+                      TextSpan(
+                          text: " Register",
+                          style: GoogleFonts.poppins(
+                              fontSize: 14.5,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff191970))),
+                    ])),
+                  ),
                 )
               ],
             ),
