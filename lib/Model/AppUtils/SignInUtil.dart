@@ -14,6 +14,11 @@ class SignInUtil{
       color: CupertinoColors.black,
       fontWeight: FontWeight.w400
   );
+  static dynamic showPassIcon = const Icon(
+    CupertinoIcons.eye_slash,
+    size: 25,
+    color: Colors.black26,
+  );
   static final formKey = GlobalKey<FormState>();
   static bool showPass = false;
   static bool isEmailValid = false;

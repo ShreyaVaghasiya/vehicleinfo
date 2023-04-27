@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "473028476518",
-    "project_id": "vehicleinfo-b0337",
-    "storage_bucket": "vehicleinfo-b0337.appspot.com"
+    "project_number": "79950371127",
+    "project_id": "vehicleinfo-c74ba",
+    "storage_bucket": "vehicleinfo-c74ba.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:473028476518:android:3760816394733265bef7a7",
+        "mobilesdk_app_id": "1:79950371127:android:4cf013f6e04256434422b2",
         "android_client_info": {
           "package_name": "com.example.vehicleinfo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "473028476518-0idklopv0joa4ac151kcn578inu8udmh.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.vehicleinfo",
-            "certificate_hash": "a364c4a493a7204e17ab643634855744c86624de"
-          }
-        },
-        {
-          "client_id": "473028476518-rqbp5uaqq151nj4e18lb99do64dl0d42.apps.googleusercontent.com",
+          "client_id": "79950371127-g4sck2qqf036415od3iv8k2td9i95mb2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDzijSPaQ3vGwhM_3qPQirTooNLzTklglM"
+          "current_key": "AIzaSyD1xH3ZRj6jyqI-IA4nPGmVAZgEYpC5Ttk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "473028476518-fe78jv3738nc99134o56pv0juv6195vp.apps.googleusercontent.com",
+              "client_id": "79950371127-32cp406tlkfgtoabp0mfmikl7pj2l2qi.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
