@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vehicleinfo/Views/HomeScreen.dart';
 
 import '../Model/AppUtils/SignInUtil.dart';
 
@@ -35,6 +36,7 @@ class SignInController extends GetxController {
 
   logInValidation() {
     if (SignInUtil.formKey.currentState!.validate()) {
+      Get.to(Home_Screen());
     } else {}
     update();
   }

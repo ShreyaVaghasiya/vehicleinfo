@@ -39,6 +39,4 @@ class SignUpController extends GetxController {
     } else {}
     update();
   }
-
-
 }

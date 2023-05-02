@@ -8,7 +8,7 @@ import '../Model/AppUtils/SignInUtil.dart';
 import '../Model/AppUtils/SizeUtil.dart';
 
 class Sign_In extends StatefulWidget {
-   Sign_In({Key? key}) : super(key: key);
+   const Sign_In({Key? key}) : super(key: key);
 
   @override
   State<Sign_In> createState() => _Sign_InState();
@@ -31,7 +31,7 @@ class _Sign_InState extends State<Sign_In> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image(
+                const Image(
                   image: AssetImage('assets/myimages/Signinimage.png'),
                 ),
                 Padding(
@@ -54,16 +54,16 @@ class _Sign_InState extends State<Sign_In> {
                       const EdgeInsets.only(top: 40.0, left: 40, right: 40),
                   child: TextFormField(
                     decoration: InputDecoration(
-                      focusedBorder: UnderlineInputBorder(
+                      focusedBorder: const UnderlineInputBorder(
                         borderSide:
                             BorderSide(width: 2.5, color: Color(0xff191979)),
                       ),
-                      enabledBorder: UnderlineInputBorder(
+                      enabledBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(width: 2, color: Colors.black54),
                       ),
                       hintText: "Email ID",
                       hintStyle: SignInUtil.hintText,
-                      icon: Icon(
+                      icon: const Icon(
                         CupertinoIcons.mail,
                         size: 25,
                         color: Colors.black26,
@@ -90,11 +90,11 @@ class _Sign_InState extends State<Sign_In> {
                     builder:(SignInController signInController){
                       return TextFormField(
                         decoration: InputDecoration(
-                            focusedBorder: UnderlineInputBorder(
+                            focusedBorder: const UnderlineInputBorder(
                               borderSide:
                               BorderSide(width: 2.5, color: Color(0xff191979)),
                             ),
-                            enabledBorder: UnderlineInputBorder(
+                            enabledBorder: const UnderlineInputBorder(
                               borderSide: BorderSide(width: 2, color: Colors.black54),
                             ),
                             suffixIcon: GestureDetector(
@@ -105,7 +105,7 @@ class _Sign_InState extends State<Sign_In> {
                             ),
                             hintText: "Password",
                             hintStyle: SignInUtil.hintText,
-                            icon:Icon(CupertinoIcons.lock,color: Colors.black26,)
+                            icon:const Icon(CupertinoIcons.lock,color: Colors.black26,)
 
                         ),
                         style: SignInUtil.inputText,
@@ -130,12 +130,12 @@ class _Sign_InState extends State<Sign_In> {
                       signInController.logInValidation();
                   },
                   child: Container(
-                    margin: EdgeInsets.only(top: 40, left: 40, right: 40),
+                    margin: const EdgeInsets.only(top: 40, left: 40, right: 40),
                     height: SizeUtils.h / 16,
                     width: SizeUtils.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xff191970)),
+                        color: const Color(0xff191970)),
                     child: Center(
                       child: Text(
                         "Login",
@@ -152,7 +152,7 @@ class _Sign_InState extends State<Sign_In> {
                   padding: const EdgeInsets.only(top: 20, left: 40, right: 40),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         "---------------------------------------",
                         style: TextStyle(
                           color: Colors.black26,
@@ -163,7 +163,7 @@ class _Sign_InState extends State<Sign_In> {
                         style: GoogleFonts.poppins(
                             fontSize: 14, color: Colors.black54),
                       ),
-                      Text(
+                      const Text(
                         "---------------------------------------",
                         style: TextStyle(
                           color: Colors.black26,
@@ -177,7 +177,7 @@ class _Sign_InState extends State<Sign_In> {
                   child: InkWell(
                     onTap: () {},
                     child: Container(
-                      margin: EdgeInsets.only(top: 20, left: 40, right: 40),
+                      margin: const EdgeInsets.only(top: 20, left: 40, right: 40),
                       height: SizeUtils.h / 16,
                       width: SizeUtils.w,
                       decoration: BoxDecoration(
@@ -187,8 +187,8 @@ class _Sign_InState extends State<Sign_In> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
+                            const Padding(
+                              padding: EdgeInsets.only(
                                   left: 50.0, top: 10, bottom: 10, right: 30),
                               child: Image(
                                   image:
@@ -224,7 +224,7 @@ class _Sign_InState extends State<Sign_In> {
                           style: GoogleFonts.poppins(
                               fontSize: 14.5,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xff191970))),
+                              color: const Color(0xff191970))),
                     ])),
                   ),
                 )
