@@ -20,18 +20,16 @@ class _Home_ScreenState extends State<Home_Screen> {
         children: [
           Stack(
             children: [
-
               Container(
                 height: SizeUtils.h / 5,
                 width: SizeUtils.w,
                 color: Color(0xff191970),
               ),
-
               Positioned(
                 top: SizeUtils.h / 14,
                 child: Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     const CircleAvatar(
@@ -43,7 +41,9 @@ class _Home_ScreenState extends State<Home_Screen> {
                         size: 20,
                       ),
                     ),
-                    Padding(padding: EdgeInsets.all(10)),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -98,8 +98,8 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ),
               ),
               Positioned(
-                top: SizeUtils.h/14,
-                left: SizeUtils.w/2,
+                top: SizeUtils.h / 14,
+                left: SizeUtils.w / 2,
                 child: CarouselSlider(
                   options: CarouselOptions(
                     height: SizeUtils.h / 10,
@@ -121,12 +121,12 @@ class _Home_ScreenState extends State<Home_Screen> {
                       builder: (BuildContext context) {
                         return Container(
                             width: MediaQuery.of(context).size.width,
-                            margin: EdgeInsets.symmetric(horizontal: 5.0),
-                            decoration:
-                            BoxDecoration(color: CupertinoColors.white),
+                            margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                            decoration: const BoxDecoration(
+                                color: CupertinoColors.white),
                             child: Text(
                               'text $i',
-                              style: TextStyle(fontSize: 16.0),
+                              style: const TextStyle(fontSize: 16.0),
                             ));
                       },
                     );
@@ -135,7 +135,6 @@ class _Home_ScreenState extends State<Home_Screen> {
               ),
             ],
           ),
-
         ],
       ),
       backgroundColor: CupertinoColors.white,
