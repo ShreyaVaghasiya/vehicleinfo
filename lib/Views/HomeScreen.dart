@@ -179,10 +179,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                         ),
                       ),
                       style: GoogleFonts.lato(
-                                                                                                                                                                                                                                     t6666666666666666666
-                          6
-
-                          666666666666666666666fontSize: 14,
+                          fontSize: 14,
                           letterSpacing: 1,
                           color: CupertinoColors.black,
                           fontWeight: FontWeight.w400
