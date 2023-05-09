@@ -30,70 +30,67 @@ class _Home_ScreenState extends State<Home_Screen> {
   }
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(SizeUtils.h / 12),
-        child: AppBar(
-          title: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Hi , ${SignUpUtil.nameController.text}",
-                style: GoogleFonts.lato(
-                    fontSize: 18,
-                    letterSpacing: 1,
-                    color: CupertinoColors.white,
-                    fontWeight: FontWeight.w600),
-              ),
-              Text(
-                "Surat",
-                style: GoogleFonts.lato(
-                    fontSize: 16,
-                    letterSpacing: 1,
-                    color: Colors.white54,
-                    fontWeight: FontWeight.w600),
-              ),
-            ],
-          ),
-          backgroundColor: Color(0xff191970),
-          leading: const Padding(
-            padding: EdgeInsets.all(10),
-            child: CircleAvatar(
-              backgroundColor: CupertinoColors.white,
-              child: Icon(
-                CupertinoIcons.person,
-                color: Color(0xff191970),
-                size: 18,
-              ),
+      appBar: AppBar(
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Hi , ${SignUpUtil.nameController.text}",
+              style: GoogleFonts.lato(
+                  fontSize: 18,
+                  letterSpacing: 1,
+                  color: CupertinoColors.white,
+                  fontWeight: FontWeight.w600),
             ),
-          ),
-          actions: const [
-            CircleAvatar(
-              backgroundColor: CupertinoColors.white,
-              radius: 15,
-              child: Icon(
-                CupertinoIcons.heart,
-                color: Color(0xff191970),
-                size: 18,
-              ),
+            Text(
+              "Surat",
+              style: GoogleFonts.lato(
+                  fontSize: 16,
+                  letterSpacing: 1,
+                  color: Colors.white54,
+                  fontWeight: FontWeight.w600),
             ),
-            SizedBox(
-              width: 10,
-            ),
-            CircleAvatar(
-              backgroundColor: CupertinoColors.white,
-              radius: 15,
-              child: Icon(
-                CupertinoIcons.settings_solid,
-                color: Color(0xff191970),
-                size: 18,
-              ),
-            ),
-            SizedBox(
-              width: 10,
-            )
           ],
-          elevation: 0,
         ),
+        backgroundColor: Color(0xff191970),
+        leading: const Padding(
+          padding: EdgeInsets.all(10),
+          child: CircleAvatar(
+            backgroundColor: CupertinoColors.white,
+            child: Icon(
+              CupertinoIcons.person,
+              color: Color(0xff191970),
+              size: 18,
+            ),
+          ),
+        ),
+        actions: const [
+          CircleAvatar(
+            backgroundColor: CupertinoColors.white,
+            radius: 15,
+            child: Icon(
+              CupertinoIcons.heart,
+              color: Color(0xff191970),
+              size: 18,
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          CircleAvatar(
+            backgroundColor: CupertinoColors.white,
+            radius: 15,
+            child: Icon(
+              CupertinoIcons.settings_solid,
+              color: Color(0xff191970),
+              size: 18,
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          )
+        ],
+        elevation: 0,
       ),
       body: Form(
         key: HomeUtils.formKey,
@@ -205,7 +202,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                   InkWell(
                     onTap: (){
                       homeController.vehicleNoValidation();
-                      vehicleDetailController.getUserResponse();
+                      // vehicleDetailController.getUserResponse();
                     },
                     child: Container(
                       height: SizeUtils.h/18,
@@ -231,6 +228,7 @@ class _Home_ScreenState extends State<Home_Screen> {
         ),
       ),
       backgroundColor: CupertinoColors.white,
+      resizeToAvoidBottomInset: false,
     );
   }
 }

@@ -86,18 +86,20 @@ class _details_ScreenState extends State<details_Screen> {
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "Owner Name",
-                            style: GoogleFonts.lato(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w900,
-                                letterSpacing: 1,
-                                color: Color(0xff191970)),
-                          ),
                           SizedBox(height: 20),
                           Text(
                             "${vehicleDetailController.res['result']['owner_name']}   ${vehicleDetailController.res['result']['father_name']} ",
+                            style: GoogleFonts.lato(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.green.shade900,
+                            ),
+                          ),
+                            SizedBox(height: 20),
+                          Text(
+                            "Reg.No : ${vehicleDetailController.res['result']['registration_number']}",
                             style: GoogleFonts.lato(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
@@ -117,8 +119,7 @@ class _details_ScreenState extends State<details_Screen> {
                       "Serial No . ${vehicleDetailController.res['result']['owner_serial_number']}",
                       style: GoogleFonts.lato(
                         fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.green.shade900,
+                        color: Color(0xff191970),
                       ),
                     ),
                   )
@@ -324,7 +325,7 @@ class _details_ScreenState extends State<details_Screen> {
                           textAlign: TextAlign.justify,
                         ),
                         Divider(color: Colors.black54,height: 40,thickness: 1,),                        Text(
-                          "Chassis Number : ${vehicleDetailController.res['result']['chassis_number']}",
+                          "Permit issue Date : ${vehicleDetailController.res['result']['permit_issue_date']}",
                           style: GoogleFonts.lato(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
@@ -332,15 +333,15 @@ class _details_ScreenState extends State<details_Screen> {
                           textAlign: TextAlign.justify,
                         ), Divider(color: Colors.black54,height: 40,thickness: 1,),
                         Text(
-                          "Engine Number : ${vehicleDetailController.res['result']['engine_number']}",
+                          "PUC Validity : ${vehicleDetailController.res['result']['puc_valid_upto']}",
                           style: GoogleFonts.lato(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xff191970)),
+                              color: Colors.red.shade900,),
                           textAlign: TextAlign.justify,
                         ), Divider(color: Colors.black54,height: 40,thickness: 1,),
                         Text(
-                          "Cylinder : ${vehicleDetailController.res['result']['number_of_cylinder']}",
+                          "Fitness : ${vehicleDetailController.res['result']['fitness_upto']}",
                           style: GoogleFonts.lato(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
@@ -442,6 +443,85 @@ class _details_ScreenState extends State<details_Screen> {
                               color: Color(0xff191970)),
                           textAlign: TextAlign.justify,
                         ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              height: SizeUtils.h / 4,
+              width: SizeUtils.w,
+              margin: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(color: Colors.black12, width: 1),
+                  boxShadow: const [
+                    BoxShadow(
+                      offset: Offset(1, 2),
+                      color: Colors.black12,
+                    ),
+                  ]),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    children: [
+
+                      Text(
+                        "   Insurance Details",
+                        style: GoogleFonts.lato(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w900,
+                            color: Color(0xff191970)),
+                      ),SizedBox(width: 50,),
+
+                      Text(
+                        "Insurance Validity : ${vehicleDetailController.res['result']['insurance_validity']}",
+                        style: GoogleFonts.lato(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.green.shade900),
+                      ),
+
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                  Padding(
+                    padding:
+                    const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Insurance Name : ${vehicleDetailController.res['result']['insurance_name']}",
+                          style: GoogleFonts.lato(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff191970)),
+                          textAlign: TextAlign.justify,
+                        ),
+                        Divider(color: Colors.black54,height: 40,thickness: 1,),
+                        Text(
+                          "Insurance Policy No : ${vehicleDetailController.res['result']['insurance_policy_no']}",
+                          style: GoogleFonts.lato(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff191970)),
+                          textAlign: TextAlign.justify,
+                        ),
+                        Divider(color: Colors.black54,height: 40,thickness: 1,),
+                        Text(
+                          "Insurance Validity : ${vehicleDetailController.res['result']['insurance_validity']}",
+                          style: GoogleFonts.lato(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.red.shade900),
+                          textAlign: TextAlign.justify,
+                        )
                       ],
                     ),
                   ),

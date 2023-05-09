@@ -4,6 +4,8 @@ import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:vehicleinfo/Model/AppUtils/vehicleDetailUtils.dart';
 import 'package:http/http.dart' as http;
+
+import '../Model/AppUtils/HomeUtils.dart';
 class VehicleDetailController extends GetxController{
   var res;
    getUserResponse()async{
@@ -14,7 +16,7 @@ class VehicleDetailController extends GetxController{
     },
       body:
         {
-          'VehicleNumber': VehicleDetailsUtils.VehicleNumber
+          'VehicleNumber': HomeUtils.vehicleNoController.text
         }
 
     );
