@@ -8,6 +8,8 @@ import 'package:vehicleinfo/Model/AppUtils/HomeUtils.dart';
 import 'package:vehicleinfo/Model/AppUtils/SignUpUtil.dart';
 import 'package:vehicleinfo/Model/AppUtils/SizeUtil.dart';
 import 'package:get/get.dart';
+
+import '../Controller/VehicleDetailController.dart';
 class Home_Screen extends StatefulWidget {
   const Home_Screen({Key? key}) : super(key: key);
 
@@ -17,6 +19,8 @@ class Home_Screen extends StatefulWidget {
 
 class _Home_ScreenState extends State<Home_Screen> {
   HomeController homeController = Get.put(HomeController());
+  VehicleDetailController vehicleDetailController = Get.put(VehicleDetailController());
+
   @override
   @override
   void initState() {
@@ -201,6 +205,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                   InkWell(
                     onTap: (){
                       homeController.vehicleNoValidation();
+                      vehicleDetailController.getUserResponse();
                     },
                     child: Container(
                       height: SizeUtils.h/18,
